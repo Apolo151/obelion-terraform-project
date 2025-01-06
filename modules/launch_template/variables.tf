@@ -3,7 +3,7 @@ variable "launch_template_name" {
   type        = string
 }
 
-variable "image_id" {
+variable "ami_id" {
   description = "The ID of the AMI"
   type        = string
 }
@@ -18,39 +18,34 @@ variable "key_name" {
   type        = string
 }
 
-variable "user_data" {
-  description = "The user data for the instance"
-  type        = string
-}
-
 variable "vpc_security_group_ids" {
   description = "The security group IDs for the instance"
   type        = list(string)
 }
 
-variable "iam_instance_profile" {
-  description = "The IAM instance profile for the instance"
+variable "database_private_ip" {
+  description = "The private IP of the database instance"
   type        = string
 }
 
-variable "monitoring" {
-  description = "The monitoring settings for the instance"
-  type        = map(any)
+variable "wordpress_database_name" {
+  description = "The name of the WordPress database"
+  type        = string
 }
 
-variable "tag_specifications" {
-  description = "The tags for the instance"
-  type        = list(map)
+variable "wordpress_database_user" {
+  description = "The username for the WordPress database"
+  type        = string
+}
+
+variable "wordpress_database_password" {
+  description = "The password for the WordPress database"
+  type        = string
+
 }
 
 variable "env" {
   description = "The environment for the resources"
   type        = string
   default     = "abdallah"
-}
-
-variable "region" {
-  description = "The region for the resources"
-  type        = string
-  default     = "us-east-1"
 }

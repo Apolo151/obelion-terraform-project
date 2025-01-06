@@ -41,3 +41,19 @@ output "public_rtb_id" {
 output "private_rtb_id" {
   value = module.route_tables.private_rtb_id
 }
+
+output "db_instance_private_ip" {
+  value = module.db.db_instance_private_ip
+}
+
+output "launch_template_id" {
+  value = module.launch_template.launch_template_id
+}
+
+output "asg_id" {
+  value = module.asg.asg_id
+}
+
+output "load_balancer_dns" {
+  value = module.asg.load_balancer_dns
+}

@@ -5,19 +5,16 @@ variable "vpc_id" {
 
 variable "public_subnet_cidr_block" {
   description = "The CIDR block for the public subnet"
-  type        = string
   default     = ""
 }
 
 variable "availability_zone" {
   description = "The availability zone for the subnet"
-  type        = string
   default     = ""
 }
 
 variable "public_subnet_name" {
   description = "The name of the public subnet"
-  type        = string
   default     = ""
 }
 

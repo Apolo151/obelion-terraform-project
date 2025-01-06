@@ -3,5 +3,5 @@ output "public_rtb_id" {
 }
 
 output "private_rtb_id" {
-  value = aws_route_table.private_rtb.id 
+  value = aws_route_table.private_rtb.id
 }
